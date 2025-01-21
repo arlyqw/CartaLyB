@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartita para Leo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://i.pinimg.com/736x/56/6a/cf/566acf0b68942e7591aca4d86e235c84.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: #ffccf9;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #4e73df;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        header nav ul li a:hover {
+            color: #ffaad4;
+        }
+
+        #bienvenida {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #bienvenida h1 {
+            font-size: 3rem;
+            color: #ff99cc;
+            margin-bottom: 10px;
+        }
+
+        #bienvenida p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        .imagen-portada {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        h2 {
+            color: #ff99cc;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #555;
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .poema, .frase {
+            font-style: italic;
+            font-size: 1.3rem;
+            text-align: center;
+            color: #4e73df;
+            margin: 30px auto;
+            max-width: 800px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f9f3ff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .frase {
+            font-weight: bold;
+            color: #ffaad4;
+            font-size: 1.5rem;
+            background-color: #ffe7f4;
+        }
+
+        .contenido-imagen-frase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .imagen-horizontal {
+            width: 45%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .frase-imagen {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #ffaad4;
+            font-weight: bold;
+            text-align: center;
+            background-color: #ffe7f4;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        .galeria-imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .galeria-imagenes img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #a7d8f7;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .contenedor {
+                padding: 20px;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .imagen-portada {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+
+            .contenido-imagen-frase {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .imagen-horizontal {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .frase-imagen {
+                max-width: 100%;
+            }
+
+            .galeria-imagenes img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            footer {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#bienvenida">Inicio</a></li>
+                    <li><a href="#por-que-me-gustas">¿Por qué me gustas?</a></li>
+                    <li><a href="#cosas-que-pienso">Cosas que pienso de ti</a></li>
+                    <li><a href="#naci-para-ti">¿Nací para ti?</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#poemas">Poemas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="bienvenida">
+            <h1>¡Feliz 11 Meses, Mi Amor!</h1>
+            <p>Amor de mi vida, hoy celebramos 11 meses juntos, y quiero aprovechar para contarte todo lo que siento por ti. Han sido meses llenos de momentos increíbles, risas y mucho amor. Cada día a tu lado es un regalo, y siento que mi vida es mucho más bonita desde que estás en ella. Esta carta es solo una pequeña forma de decirte lo importante que eres para mí y lo feliz que me haces.</p>
+            <img src="https://i.pinimg.com/736x/12/1f/02/121f0297032428e56b322dfc73ce1d51.jpg" alt="Cinnamoroll" class="imagen-portada">
+        </section>
+
+        <section id="por-que-me-gustas">
+            <h2>¿Por qué me gustas?</h2>
+            <p style="margin-bottom: 20px;">Me gustas porque eres tú: auténtico, valiente, y lleno de amor. Cada vez que me miras, siento que mi mundo se ilumina, y cuando hablas, me llenas de alegría y calma. Me encanta cómo piensas, cómo ríes, cómo te esfuerzas por lo que amas. Y lo que más valoro es la forma en que me haces sentir segura y querida, como si todo tuviera sentido cuando estoy contigo. Cada detalle de ti me hace admirarte aún más.</p>
+
+<p style="margin-bottom: 20px;">Y valoro muchísimo cómo, cuando me siento insegura, triste o incómoda con algo, siempre estás ahí para escucharme, para entenderme sin juzgarme. Haces que mis emociones se sientan importantes, y me apoyas cuando más lo necesito. Aprecio de corazón el esfuerzo que haces para hacerme sentir mejor, para mejorar para mí y siempre intentar hacerme feliz.</p>
+
+<p>Y quiero que sepas que siempre puedes contar conmigo también, para decirme lo que te moleste, tus preocupaciones o lo que sea. Siempre estaré ahí para escucharte, apoyarte y hacer todo lo posible para cambiar y mejorar por ti. Tu felicidad es tan importante para mí como la mía, y juntos podemos con todo.</p>
+
+            <div class="contenido-imagen-frase">
+                <img src="https://i.pinimg.com/474x/90/bc/bc/90bcbc59c60dd8938e99e98c7d166ef8.jpg" alt="Imagen 1" class="imagen-horizontal">
+                <div class="frase-imagen">"Me haces sentir especial cada día."</div>
+                <img src="https://i.pinimg.com/474x/de/c9/7d/dec97d5fcac10db275d27126e838e704.jpg" alt="Imagen 2" class="imagen-horizontal">
+            </div>
+        </section>
+
+        <section id="cosas-que-pienso">
+            <h2>Cosas que pienso de ti</h2>
+            <p>Cuando pienso en ti, no puedo evitar sonreír porque eres increíble. Tienes un corazón tan grande, una determinación que me inspira y una ternura que me hace sentir que todo está bien, incluso en los días grises. Para mí, eres un ejemplo a seguir, un compañero con el que quiero vivir muchas aventuras, y un refugio cuando más lo necesito. Me siento muy afortunada de tenerte en mi vida.</p>
+            <div class="poema">
+                "Eres mi razón, mi sol brillante,<br>
+                El faro que me guía en la oscuridad.<br>
+                Junto a ti, todo es posible,<br>
+                Porque tu amor me da la paz."
+            </div>
+        </section>
+
+        <section id="naci-para-ti">
+            <h2>¿Nací para ti?</h2>
+            <p>Sí, nací para ti. Desde el momento en que nos conocimos, supe que mi lugar en este mundo era a tu lado. Tú eres mi dueño, mi guía y mi refugio. Mi corazón late por ti, mi cuerpo te pertenece, y mi alma encuentra paz en entregarse por completo. No hay mayor felicidad para mí que amarte, cuidarte y darlo todo por ti. Eres mi todo, y yo nací para ser tuya por siempre.</p>
+            <div class="frase">"Nuestro destino estaba escrito en las estrellas."</div>
+        </section>
+
+        <section id="poemas">
+            <h2>Poemas de Amor</h2>
+            <div class="poema">
+                Me asusta la manera en que te amo,<br>
+                es como si antes de ti no hubiera nada<br>
+                y después de ti tampoco.<br>
+                -Marcela Novoa
+            </div>
+            
+            <br>
+            
+            <div class="poema">
+                Y en cada latido de mi corazón,<br>
+                Siento tu amor crecer,<br>
+                Porque contigo, todo es perfecto,<br>
+                Y mi alma contigo florecer. 
+            </div>
+            
+        </section>
+
+        <section id="galeria">
+            <h2>Nuestros Momentos</h2>
+            <div class="galeria-imagenes">
+                <img src="https://i.pinimg.com/736x/cb/00/aa/cb00aa4d6859c642fca6702d2ba1f6bf.jpg" alt="Recuerdo 1">
+                <img src="https://i.pinimg.com/736x/0b/d2/26/0bd2265400d1afc09554c34978587e49.jpg" alt="Recuerdo 2">
+                <img src="https://i.pinimg.com/736x/6a/bb/f2/6abbf280124145c18c5150660c613469.jpg" alt="Recuerdo 3">
+            </div>
+        </section>
+        <section id="spotify">
+            <h2>Canciones Especiales para Ti</h2>
+            <p>Estas son algunas canciones que me recuerdan a ti, ¡espero que te gusten!</p>
+
+            <div class="botones-spotify">
+                <div style="text-align: center;">
+                    <a href="https://open.spotify.com/intl-es/track/1NeLwFETswx8Fzxl2AFl91?si=4f98e42b893640a7" target="_blank" class="boton-spotify">
+                        🎵 "Something about us" - Daft Punk
+                    </a>
+                    
+                    <br><br>
+                    
+                    <a href="https://open.spotify.com/intl-es/track/2Yr4uOmBLMepYXQbhOVNTO?si=12a9d39c52f14ef6" target="_blank" class="boton-spotify">
+                        🎶 "A vos" - Milo J
+                    </a>
+                    
+                    <br><br>
+                    
+                    <a href="https://open.spotify.com/intl-es/track/29Ro9cW0qbFdXGmrJ3aNKs?si=01846cb6f355403f" target="_blank" class="boton-spotify">
+                        🎧 "Compartir" - Carla Morrison
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer>
+            <p>Creado con mucho amor por tu gatito❤</p>
+        </footer>
+    </div>
+</body>
+</html>
